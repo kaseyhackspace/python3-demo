@@ -9,11 +9,10 @@ __license__ = "MIT"
 
 def main():
     """ Main entry point of the app """
-    print("hello world")
-    celsius = input('Input celsius here: ')
-    farenheit = (float(celsius)*1.8) + 32
+    celsius = input('Input Celsius here: ')
+    fahrenheit = (float(celsius)*1.8) + 32
     print('celsius:'+celsius)
-    print('farenheit:'+str(farenheit))
+    print('fahrenheit:'+str(fahrenheit))
 
 
 if __name__ == "__main__":
