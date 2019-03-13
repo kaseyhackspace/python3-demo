@@ -16,22 +16,25 @@ def f_to_c(f):
 
 def main():
     """ Main entry point of the app """
-    repeat = True
-    while repeat:
-        print("1- Celsius to Fahrenheit\n2- Fahrenheit to Celsius\n")
-        choice = input('Choose a conversion: ')
-        if choice == '1':
-            celsius = input('Input celsius:')
+    
+    print("Enter numbers separated by ','")
+    numbers = input("numbers: ")
+    number_list = numbers.split(',')
+    number_len = len(number_list)
+    print("You gave " + str(number_len) + " numbers")
+
+    print("1- Celsius to Fahrenheit\n2- Fahrenheit to Celsius\n")
+    choice = input('Choose a conversion: ')
+    if choice == '1':
+        for celsius in number_list:
             fahrenheit = c_to_f(celsius)
             print('celsius:'+celsius)
-            print('fahrenheit:'+str(fahrenheit))
-        else:
-            fahrenheit = input('Input fahrenheit:')
+            print('fahrenheit:'+str(fahrenheit)+'\n')
+    else:
+        for fahrenheit in number_list:
             celsius = f_to_c(fahrenheit)
             print('fahrenheit:'+fahrenheit)
-            print('celsius:'+str(celsius))
-        print("\nDo you want to repeat?")
-        repeat = int(input("1 - yes \n0 - no: "))
+            print('celsius:'+str(celsius)+'\n')
 
 
 
