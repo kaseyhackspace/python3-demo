@@ -12,7 +12,8 @@ def c_to_f(c):
 
 def f_to_c(f):
     c = (float(f)-32) / 1.8
-    return c
+    print('fahrenheit:'+f)
+    print('celsius:'+str(c))
 
 def main():
     """ Main entry point of the app """
@@ -25,9 +26,8 @@ def main():
         print('fahrenheit:'+str(fahrenheit))
     else:
         fahrenheit = input('Input fahrenheit:')
-        celsius = f_to_c(fahrenheit)
-        print('fahrenheit:'+fahrenheit)
-        print('celsius:'+str(celsius))
+        f_to_c(fahrenheit)
+        
         
 
 
